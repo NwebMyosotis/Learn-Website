@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      span {
+        border: 1px solid black;
+      }
+      #grid {
+        border: 5px solid pink;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        /* fr은 화면 전체 기준으로 몇 대 몇으로 나눌 것인지를 의미함 */
+        /* 최신 기술을 사용할 떄는 can i use에 검색해본 뒤 어느정도의 사람들이 해당 기술에 호환되는지 확인할 것 */
+      }
+
+    </style>
+  </head>
+    <!--div는 block level-->
+    <div>Navigation</div>
+    <div>Article</div>
+    <!--span은 inline element-->
+    <span>Navigation</span>
+    <span>Article</span>
+    <br /> <br />
+    <div id="grid">
+      <div>Navigation</div>
+      <div>Article</div>
+    </div>
+    <h2><a href="GridPractice.html">Practice</a></h2>
+  </body>
+</html>

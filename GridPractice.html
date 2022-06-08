@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>test grid</title>
+    <style>
+      h1 {
+        font-size: 50px;
+        text-align: center;
+      }
+
+      #grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Test Title</h1>
+    </div>
+    <div id="grid">
+      <div id="leftGrid">
+        <h2>Left Grid</h2>
+        <p>
+          This Grid is LeftGrid. It used display:grid and grid-template-columns.
+        </p>
+      </div>
+      <div id="rightGrid">
+        <h3>Right Grid</h3>
+        <p>
+          If you want to divide your blanks Left-Right you can use
+          'grid-template-columns'. Grid-template-columns needs display:grid Tag.
+          It makes divide horizontally your website.
+        </p>
+      </div>
+    </div>
+    <h1><a href="index.html">MAIN</a></h1>
+  </body>
+</html>

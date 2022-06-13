@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Practice Night-Day button</title>
+    </head>
+    <style>
+        .title {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1 class="title"><a href="practiceNightDay.html">This html is to made for NightDay button.</a></h1>
+        <h2>It makes by JavaScript.</h2>
+        <p>I want to make a button that has function change Nightmode and Daymode.<br>
+            How can I do it? First, Let's makes a button.<br>    
+        </p>
+        <h3>Make button : Using the &lt;input&gt; tag</h3>
+        <input type="button" value="버튼">
+        <p> If you want make it, you can use &lt;input&gt; tag.<br>
+            &lt;input type="button" value="text in button"&gt;<br>
+            &lt;input&gt; handles various type of input methods, like button, text, password and checkbox.<br>
+            We can change the type, if you use 'type=' attribute.<br>
+            if you write a text in the 'value=' attribute, can give a name your button.
+        </p>
+        <h3>Give a event to button</h3>
+        <input type="button" value="이벤트" onclick="alert('버튼 이벤트')">
+        <p>'onclick=' gives an event your &lt;input&gt; tag. <br>
+            I gave my button an alert window. <br>
+            You can consider give 'alert' function in the 'onclick=', if you want make it.<br>
+            like... this!<br>
+        &lt;input type="button" value="이벤트" onclick="alert('버튼 이벤트')"&gt;
+        </p>
+        <h3>And... How can I make nightday button?</h3>
+        <p>Now, We can make a button that using the 'input' tag. but I'm not make NightDay button yet.<br>
+            Then, How can I make it? I will using JavaScript code 'document.querySelector()' in 'onclick' attribute.<br>
+            <b>change backgorund color black</b><br>
+            &lt;input type="button" value="이벤트" onclick="document.querySelector().style.backgroundColor = 'black"&gt;<br>
+            <b>change text color white</b><br>
+            &lt;input type="button" value="이벤트" onclick="document.querySelector().style.color = 'white"&gt;
+        </p>
+        <input type="button" value="야간모드" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';        
+        ">
+         <input type="button" value="주간모드" onclick="
+         document.querySelector('body').style.backgroundColor = 'white';
+         document.querySelector('body').style.color = 'black';        
+         ">
+         <br><br>
+         <h3>Using only one button</h3>
+         <input id="night_day" type="button" value='야간모드', onclick="
+         if(document.querySelector('#night_day').value === '야간모드'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#night_day').value = '주간모드';
+
+         } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('#night_day').value = '야간모드';
+         }
+         ">
+         <br><br>
+         <!-- 링크에 색이 적용되지 않는 문제를 해결하기 위해 while사용. -->
+         <h3>How can I change link text color?</h3>
+         <h3><a href="index.html">Home Link</a></h3>
+         <h3>Using the Loop</h3>
+         <input id="night_day1" type="button" value='야간모드', onclick="
+           if(document.querySelector('#night_day1').value === '야간모드'){
+            var i = 0;
+            while(i < document.querySelectorAll('a').length){
+                document.querySelectorAll('a')[i].style.color = 'white';
+                i = i + 1;
+            }
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#night_day1').value = '주간모드';
+
+         } else {
+            var i = 0;
+            while(i < document.querySelectorAll('a').length){
+                document.querySelectorAll('a')[i].style.color = 'black';
+                i = i + 1;
+            }
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('#night_day1').value = '야간모드';
+         }
+         "><br><br>
+         <!-- 장문의 함수를 축약하기 위해서 this를 사용하거나, var을 이용해 대상을 변수화해 사용 -->
+         <h3>How can I shorten the code? : this, var</h3>
+         <input id="night_day2" type="button" value='야간모드', onclick="
+         var alist = document.querySelectorAll('a');
+         var bodySelector = document.querySelector('body');
+         if(document.querySelector('#night_day2').value === '야간모드'){
+          var i = 0;
+          while(i < alist.length){
+              alist[i].style.color = 'white';
+              i = i + 1;
+          }
+          bodySelector.style.backgroundColor = 'black';
+          bodySelector.style.color = 'white';
+          this.value = '주간모드';
+
+       } else {
+          var i = 0;
+          while(i < alist.length){
+              alist[i].style.color = 'black';
+              i = i + 1;
+          }
+          bodySelector.style.backgroundColor = 'white';
+          bodySelector.style.color = 'black';
+          this.value = '야간모드';
+       }
+       ">
+       <br>
+       <h3>make a function</h3>
+    </body>
+</html>
